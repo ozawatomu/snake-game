@@ -43,9 +43,9 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 		g.setColor(new Color(154, 204, 153));
 		g.fillRect(0, 0, 1200, 1200);
 		g.setColor(new Color(11, 17, 11));
-		g.setFont(new Font("Helvetica", Font.BOLD, 30)); 
-		g.drawString("High Score: " + highScore, 20, 40);
-		g.drawString("Score: " + score, 20, 80);
+		g.setFont(new Font("Courier", Font.PLAIN, 50)); 
+		g.drawString("High Score: " + highScore, 200, 90);
+		g.drawString("Score: " + score, 200, 150);
 		field.draw(g, blockSize);
 		food.draw(g, blockSize, field);
 		snake.draw(g, blockSize, field);
