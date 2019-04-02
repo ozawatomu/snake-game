@@ -13,10 +13,10 @@ import javax.swing.Timer;
 
 public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 	static int fieldSize = 20;
+	static int blockSize = 800 / fieldSize;
 	int difficulty = 2; // >= 0
-	static Field field = new Field(100, 100, fieldSize, fieldSize);
+	static Field field = new Field(200, 200, fieldSize, fieldSize);
 	Timer timer = new Timer(250 / difficulty, this);
-	static int blockSize = 400 / fieldSize;
 	int highScore = 0;
 	int score = 0;
 	static Snake snake;
@@ -25,12 +25,11 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 	public static void main(String[] args) {
 		JFrame jframe = new JFrame();
 		jframe.setTitle("Snake");
-		jframe.setSize(600, 600);
 		jframe.setVisible(true);
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		SnakeGame snakeGame = new SnakeGame();
-		snakeGame.setPreferredSize(new Dimension(600, 600));
+		snakeGame.setPreferredSize(new Dimension(1200, 1200));
 		jframe.addKeyListener(snakeGame);
 		jframe.add(snakeGame);
 		jframe.pack();
@@ -42,7 +41,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.setColor(new Color(154, 204, 153));
-		g.fillRect(0, 0, 600, 600);
+		g.fillRect(0, 0, 1200, 1200);
 		g.setColor(new Color(11, 17, 11));
 		g.setFont(new Font("Helvetica", Font.BOLD, 30)); 
 		g.drawString("High Score: " + highScore, 20, 40);
