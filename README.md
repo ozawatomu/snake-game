@@ -7,5 +7,6 @@ The program is a recreation of this game. It can be played using the arrow keys.
 <div align="left">
   <a href="https://youtu.be/lc8AXCl1dLQ" target="_blank">
     <img src="Snake_Demo.gif"  width="600" alt="Program Demo">
+    <p>Longer Demo on YouTube</p>
   </a>
 </div>
